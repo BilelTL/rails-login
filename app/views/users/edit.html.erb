@@ -1,0 +1,15 @@
+<h1>Edit Profile</h1>
+ 
+<%= form_for @user do |user| %>
+
+  <p><label>Nom de l'utilisateur</label></p>
+  <%= user.text_field :name %>
+
+  <p><label>Email de l'utilisateur</label></p>
+  <%= user.text_field :email %>
+
+  </br>
+  <%= link_to "Supprimer l'utilisateur'", @user, :method => :delete %>
+
+  <p><%= user.submit 'Mettre à jour' %></p>
+<% end %>
